@@ -1,6 +1,6 @@
 ---
 # handlers file for roles/service
-- nome: Start nomad
+- name: Start nomad
   systemd:
     name: nomad.service
     state: started
