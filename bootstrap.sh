@@ -1,4 +1,7 @@
 #!/bin/sh
+# Prevent interactive mode.
+DEBIAN_FRONTEND=noninteractive
+# Update and upgrade
 apt update
 apt upgrade -y
 # Install pip
