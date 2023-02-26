@@ -2,7 +2,7 @@
 # tasks file for roles/installation
 - name: Import Hashicorp GPG key.
   ansible.builtin.apt_key:
-    url: https://apt.releases.hashicorp/gpg
+    url: https://apt.releases.hashicorp.com/gpg
     state: present
 - name: Add Hashicorp repository.
   ansible.builtin.apt_repository:
