@@ -1,0 +1,21 @@
+---
+# tasks file for roles/installation
+- name: Import Hashicorp GPG key.
+  ansible.builtin.apt_key:
+    url: https://apt.releases.hashicorp/gpg
+    state: present
+- name: Add Hashicorp repository.
+  ansible.builtin.apt_repository:
+    repo: deb [arch=amd64] https://apt.releases.hashicorp.com {{ ansible_distribution_release }} main
+    state: present
+- name: Install Hashicorp Nomad
+  ansible.builtin.apt:
+    name: nomad=1.4.2-1
+    update_cache: yes
+    allow_downgrade: yes
+- name: Install dependencies
+  ansible.builtin.apt:
+    pkg:
+      - docker.io
+    update_cache: yes
+    allow_downgrade: yes
