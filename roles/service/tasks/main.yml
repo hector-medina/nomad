@@ -1,0 +1,8 @@
+---
+# tasks file for roles/service
+- name: Copy nomad service
+  copy: 
+    src: "{{ role_path }}/files/nomad.service"
+    dest: "/etc/systemd/system"
+    owner: ubuntu
+    group: root

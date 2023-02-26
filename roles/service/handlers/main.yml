@@ -1,0 +1,7 @@
+---
+# handlers file for roles/service
+- nome: Start nomad
+  systemd:
+    name: nomad.service
+    state: started
+    enables: yes
