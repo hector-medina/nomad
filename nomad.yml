@@ -1,0 +1,9 @@
+---
+- name: Nomad server.
+  hosts: localhost
+  roles:
+    - installation
+    - general
+    - server
+    - client
+    - service
