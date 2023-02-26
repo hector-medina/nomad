@@ -1,0 +1,9 @@
+---
+# tasks file for roles/client
+- name: Generate nomad client config.
+  ansible.builtin.template:
+    src: "{{ role.path }}/templates/client.hcl.j2"
+    dest: "/etc/nomad.d/client.hcl"
+    owner: ubuntu
+    group: root
+    mode: '0600'

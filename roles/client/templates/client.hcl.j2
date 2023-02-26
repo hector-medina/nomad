@@ -1,0 +1,8 @@
+client {
+    enabled = true
+    memory_total_mb = 7848
+    cpu_total_compute = 5500
+    server_join {
+        retry_join = [ {{ ansible_eth0.ipv4.address }} ]
+    }
+}
