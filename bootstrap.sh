@@ -11,4 +11,4 @@ python3 get-pip.py --user
 python3 -m pip install --user ansible
 echo 'export PATH="$PATH:~/.local/bin"' >> ~/.bashrc
 # Run playbook
-ansible-pull https://github.com/hector-medina/nomad.git nomad.yml
+ansible-pull -U https://github.com/hector-medina/nomad.git nomad.yml
